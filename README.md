@@ -61,8 +61,8 @@ Estructura modular y mantenible:
 
 ## ▶ Ejecución
 - npm install
-- npm run ios
-- npm run android
+- npx react-native run-ios
+- npx react-native run-android
 
 
 ## 📡 API
