@@ -1,97 +1,72 @@
-FletxSimpsons – React Native App
+# FletxSimpsons – Prueba técnica React Native
 
-Aplicación móvil construida para la prueba técnica de Fletx usando la API pública de The Simpsons. Incluye autenticación local, manejo de personajes, episodios, locations, notas y perfil.
+Aplicación móvil construida como prueba técnica para Fletx, basada en la API pública de The Simpsons. Incluye autenticación local, listado y detalle de personajes, episodios, locations, notas por personaje y pantalla de perfil.
 
-🚀 Tecnologías utilizadas
+## 🚀 Stack Tecnológico
+- React Native 0.82
+- React 19 + TypeScript
+- Redux Toolkit
+- React Navigation (Stacks & Tabs)
+- AsyncStorage (persistencia local)
+- Axios
+- UUID
+- Yup
+- Jest
 
-React Native
+## 🧱 Arquitectura del Proyecto
+Estructura modular y mantenible:
 
-React + TypeScript
-
-Redux Toolkit
-
-React Navigation
-
-Axios
-
-AsyncStorage
-
-UUID
-
-Yup
-
-🧱 Arquitectura
-
-Estructura modular organizada por dominios:
-
-src/
-  components/
-  screens/
-  hooks/
-  services/
-  storage/
-  store/
-  navigation/
-  types/
-  theme/
+src
+├── assets/ # Imágenes (logo, Homer, Bart)
+├── components/ # Componentes UI reutilizables
+│ ├── common/ # Button, TextInput, MediaCard, Pagination, etc.
+│ └── characters/ # CharacterCard
+├── screens/ # Pantallas por dominio
+│ ├── auth/ # SignIn, SignUp
+│ ├── characters/ # List, Detail, Notes
+│ ├── episodes/ # List, Detail
+│ ├── locations/ # List, Detail
+│ └── profile/ # Perfil de usuario
+├── hooks/ # Lógica de negocio
+├── services/ # Llamadas HTTP a la API
+├── storage/ # Persistencia local (usuarios, notas)
+├── navigation/ # Stacks, Tabs, RootNavigator
+├── store/ # Redux store + slices
+├── theme/ # Colores
+└── types/ # Tipos TypeScript 
 
 
-components: UI reutilizable (Button, TextInput, Pagination, MediaCard, BackButton)
+## 🔐 Autenticación
+- Registro e inicio de sesión con email y contraseña
+- Usuarios y sesión guardados en AsyncStorage
+- UUID como session token
+- Protección de navegación con Redux
 
-screens: vistas por módulo
+## 🟨 Personajes
+- Grid de 2 columnas
+- Búsqueda por nombre
+- Detalle con foto, edad, estado, ocupación y frases
+- Notas por personaje (crear, editar, eliminar)
+- Persistencia local con notesStorage
 
-hooks: lógica de negocio y consumo de servicios
+## 📺 Episodios y Locations
+- Listados con tarjetas homogéneas (MediaCard)
+- Detalles con imagen y metadatos
+- Componente reutilizable Pagination
 
-services: acceso a API
+## 👤 Perfil
+- Avatar con iniciales
+- Email y User ID
+- Logout que limpia Redux + AsyncStorage
 
-storage: persistencia local (usuarios y notas)
-
-store: Redux slices
-
-navigation: navegación global (Auth, Tabs, Stacks)
-
-🔐 Autenticación
-
-Registro e inicio de sesión con email y contraseña
-
-Usuarios almacenados en AsyncStorage
-
-Sesión mínima con sessionToken y userId persistido
-
-Pantallas: SignIn y SignUp
-
-👤 Perfil
-
-Avatar con iniciales
-
-Email e ID del usuario
-
-Botón de logout que limpia Redux + AsyncStorage
-
-🟨 Personajes
-
-Grid de personajes (2 columnas)
-
-Búsqueda por nombre
-
-Detalle con imagen, edad, estado, ocupación y frases
-
-Sistema de notas por personaje (crear, editar, eliminar)
-
-📺 Episodios y Locations
-
-Listados con tarjetas reutilizables (MediaCard)
-
-Detalles con imagen y metadatos
-
-Paginación reutilizable (Pagination)
-
-📦 API
-
-Base URL: https://thesimpsonsapi.com/api
-Imágenes: https://cdn.thesimpsonsapi.com/500
-
-▶ Ejecución
+## ▶ Ejecución
 npm install
 npm run ios
 npm run android
+
+
+## 📡 API
+Base: https://thesimpsonsapi.com/api  
+Imágenes: https://cdn.thesimpsonsapi.com/500
+
+
