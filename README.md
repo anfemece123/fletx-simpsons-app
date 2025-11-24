@@ -15,24 +15,24 @@ Aplicación móvil construida como prueba técnica para Fletx, basada en la API 
 ## 🧱 Arquitectura del Proyecto
 Estructura modular y mantenible:
 
-src
-├── assets/            # Imágenes (logo, Homer, Bart)
-├── components/        # Componentes UI reutilizables
-│   ├── common/        # Button, TextInput, MediaCard, Pagination, etc.
-│   └── characters/    # CharacterCard
-├── screens/           # Pantallas por dominio
-│   ├── auth/          # SignIn, SignUp
-│   ├── characters/    # List, Detail, Notes
-│   ├── episodes/      # List, Detail
-│   ├── locations/     # List, Detail
-│   └── profile/       # Perfil de usuario
-├── hooks/             # Lógica de negocio (custom hooks)
-├── services/          # Llamadas HTTP a la API
-├── storage/           # Persistencia local (usuarios, notas)
-├── navigation/        # Stacks, Tabs y RootNavigator
-├── store/             # Redux store + slices
-├── theme/             # Colores globales
-└── types/             # Tipos TypeScript (auth, personajes, etc.)
+- src
+- ├── assets/            # Imágenes (logo, Homer, Bart)
+- ├── components/        # Componentes UI reutilizables
+- │   ├── common/        # Button, TextInput, MediaCard, Pagination, etc.
+- │   └── characters/    # CharacterCard
+- ├── screens/           # Pantallas por dominio
+- │   ├── auth/          # SignIn, SignUp
+- │   ├── characters/    # List, Detail, Notes
+- │   ├── episodes/      # List, Detail
+- │   ├── locations/     # List, Detail
+- │   └── profile/       # Perfil de usuario
+- ├── hooks/             # Lógica de negocio (custom hooks)
+- ├── services/          # Llamadas HTTP a la API
+- ├── storage/           # Persistencia local (usuarios, notas)
+- ├── navigation/        # Stacks, Tabs y RootNavigator
+- ├── store/             # Redux store + slices
+- ├── theme/             # Colores globales
+- └── types/             # Tipos TypeScript (auth, personajes, etc.)
 
 
 
